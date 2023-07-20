@@ -16,7 +16,9 @@
     <section id="landing-page">
       <nav>
         <figure>
-          <img id="personal-logo" src="TB-logos_black.png" alt="" />
+            <div class="header__logo">
+                <h1> &lt;/&gt | TB</h1>
+            </div>
         </figure>
         <ul class="nav__link--list">
           <li class="nav__link">
@@ -68,31 +70,205 @@
           <a href="" class="social__link click">
             <i class="fab fa-github"></i>
           </a>
-          <a href="/assets/David Bragg Resume.pdf" target="_blank" class="social__link click">
+          <a
+            href="/assets/David Bragg Resume.pdf"
+            target="_blank"
+            class="social__link click"
+          >
             <i class="fas fa-file-pdf"></i>
           </a>
         </div>
       </header>
-      <button class="mail__btn click">
-        <i class="fas fa-envelope"></i>
-      </button>
-      <a href="#projects" class="scroll">
-        <div class="scroll__icon click"></div>
-      </a>
-    </section>
-    <section id="projects">
-        <div class="container">
-            <div class="row">
-                <h1 class="section__title">Here are some of my <span class="orange">projects.</span></h1>
-                <ul class="project__list">
-                    <li class="project">
-                        <div class="project__wrapper">
-                            <img src="assets/blinker mockup.png" class="project__image" alt="">
-                        </div>
-                    </li>
-                </ul>
+      
+        <a href="#projects" class="scroll">
+          <div class="scroll__icon click"></div>
+        </a>
+        <button class="mail__btn click">
+            <i class="fas fa-envelope"></i>
+        </button>
+
+        <div class="modal">
+            <div class="modal__half modal__about">
+                <h3 class="modal__title modal__title--about">Here's a bit about me</h3>
+                <h4 class="modal__sub-title modal__sub-title--about">Frontend Software Engineer</h4>
+                <p class="modal__para">I'm a 32 year old<b class="orange"> fronted end software engineer</b> with a strong passion for crafting captivating and user-friendly web experiences. I specialize in seamless UI/UX implementations and pixel-perfect <b class="orange">responsive designs</b> that leave a lasting impression on users.  
+                <br>
+                <br> 
+                <!-- need to come back to add orange -->
+                With expertise in <b class="orange"> HTML, CSS, and JavaScript</b>, I transform innovative designs into polished, high-performance websites with a keen focus on accessibility and cross-browser compatibility. Let's create <b class="orange">remarkable digital experiences</b> together!
+                </p>
+                <div class="modal__languages">
+                    <figure class="modal__language">
+                        <img class="modal__images" src="240px-HTML5_Badge.svg.png" alt="">
+                        <span class="language__name">HTML</span>
+                    </figure>
+                    <figure class="modal__language">
+                        <img class="modal__images" src="css-131-722685.webp" alt="">
+                        <span class="language__name">CSS</span>
+                    </figure>
+                    <figure class="modal__language">
+                        <img class="modal__images" src="javascript-1-225993.webp" alt="">
+                        <span class="language__name">JavaScript</span>
+                    </figure>
+                    <figure class="modal__language">
+                        <img class="modal__images" src="react-3-1175109.webp" alt="">
+                        <span class="language__name">React</span>
+                    </figure>
+                </div>
+
+            </div>
+            <div class="modal__half modal__contact">
+                <h3 class="modal__title modal__title--contact">Lets have a chat!</h3>
+                <h4 class="modal__sub-title modal__sub-title--contact">I'd love to hear from you.</h4>
+                <form id="contact__form" action="">
+                    <div class="form__item">
+                        <label class="form__item--label" for="name"><span class="orange">*</span>Name</label>
+                        <input class="input" name="user_name" type="text" required></input>
+                    </div>
+                    <div class="form__item">
+                        <label class="form__item--label" for="email"><span class="orange">*</span>Email</label>
+                        <input class="input" name="user_email" type="email" required></input>
+                    </div>
+                    <div class="form__item">
+                        <label class="form__item--label" for="message"><span class="orange">*</span>Message</label>
+                        <textarea class="input" name="message" type="text" required></textarea>
+                    </div>
+                    <button id="contact__submit" class="form__submit">Send it my way!</button>
+                </form>
+                <div class="modal__overlay modal__overlay--loading">
+                    <i class="fas fa-spinner"></i>
+                </div>
+                <div class="modal__overlay modal__overlay--success">
+                    Thanks for the message! Looking forward to speaking to you soon.
+                </div>
             </div>
         </div>
     </section>
+    <section id="projects">
+      <div class="container">
+        <div class="row">
+          <h1 class="section__title">
+            Here are some of my <span class="orange">projects.</span>
+          </h1>
+          <ul class="project__list">
+            <li class="project">
+              <div class="project__wrapper">
+                <img
+                  src="assets/blinker mockup.png"
+                  class="project__image"
+                  alt=""
+                />
+                <div class="project__wrapper--bg"></div>
+                <div class="project__description">
+                  <h3 class="project__description--title">
+                    Car Sales Project
+                  </h3>
+                  <h4 class="project__description--sub-title">
+                    Html, CSS, JavaScript, Vue, Vuex
+                  </h4>
+                  <p class="project__description--para">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. In, et recusandae nisi assumenda alias quasi aliquam! Sit non consequuntur laboriosam voluptates qui itaque, quibusdam ex, vero iure reprehenderit repellendus! Adipisci.
+                  </p>
+                  <div class="project__description-links">
+                    <a href="#" class="project__description--link">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="#" class="project__description--link">
+                        <i class="fas fa-link"></i>
+                    </a>
+                  </div>
+                </div>
+            <li class="project">
+              <div class="project__wrapper">
+                <img
+                  src="assets/blinker mockup.png"
+                  class="project__image"
+                  alt=""
+                />
+                <div class="project__wrapper--bg"></div>
+                <div class="project__description">
+                  <h3 class="project__description--title">
+                    Car Sales Project
+                  </h3>
+                  <h4 class="project__description--sub-title">
+                    Html, CSS, JavaScript, Vue, Vuex
+                  </h4>
+                  <p class="project__description--para">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. In, et recusandae nisi assumenda alias quasi aliquam! Sit non consequuntur laboriosam voluptates qui itaque, quibusdam ex, vero iure reprehenderit repellendus! Adipisci.
+                  </p>
+                  <div class="project__description-links">
+                    <a href="#" class="project__description--link">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="#" class="project__description--link">
+                        <i class="fas fa-link"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="project">
+              <div class="project__wrapper">
+                <img
+                  src="assets/blinker mockup.png"
+                  class="project__image"
+                  alt=""
+                />
+                <div class="project__wrapper--bg"></div>
+                <div class="project__description">
+                  <h3 class="project__description--title">
+                    Car Sales Project
+                  </h3>
+                  <h4 class="project__description--sub-title">
+                    Html, CSS, JavaScript, Vue, Vuex
+                  </h4>
+                  <p class="project__description--para">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. In, et recusandae nisi assumenda alias quasi aliquam! Sit non consequuntur laboriosam voluptates qui itaque, quibusdam ex, vero iure reprehenderit repellendus! Adipisci.
+                  </p>
+                  <div class="project__description-links">
+                    <a href="#" class="project__description--link">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="#" class="project__description--link">
+                        <i class="fas fa-link"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <footer>
+        <div class="container">
+            <div class="row footer__row">
+                <figure>
+                    <div class="footer__logo--img"> 
+                        <h1> &lt;/&gt | TB</h1> 
+                    </div>
+                </figure>
+                <div class="footer__social--list">
+                    <a href="#" class="footer__social--link
+                    link__hover-effect
+                    link__hover-effect--white">
+                    GitHub</a>
+                    <a href="#" class="footer__social--link
+                    link__hover-effect
+                    link__hover-effect--white">
+                    LinkedIn</a>
+                    <a href="#" class="footer__social--link
+                    link__hover-effect
+                    link__hover-effect--white">
+                    Contact</a>
+                    <a href="#" class="footer__social--link
+                    link__hover-effect
+                    link__hover-effect--white">
+                    Resume</a>
+                </div>
+                <div class="footer__copyright">Copyright Tyler Boyles 2023</div>
+            </div>
+        </div>
+    </footer>
   </body>
 </html>
