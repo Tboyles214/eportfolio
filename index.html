@@ -5,15 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tyler Boyles</title>
     <link rel="stylesheet" href="style.css" />
-    <script src="app.js"></script>
+    <script src="index.js"></script>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     />
+    <script type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+    (function(){
+    emailjs.init("-zb0Y5J6KLf-bi1au");
+    })();
+    </script>
+
     <!-- use this in the future to link fontawesome -->
   </head>
   <body>
-    <section id="landing-page">
+    <section id="landing-page" onmousemove="moveBackground(event)">
       <nav>
         <figure>
             <div class="header__logo">
@@ -30,19 +39,19 @@
           </li>
           <li class="nav__link">
             <a
-              href="#"
+              href="#projects"
               class="nav__link--anchor link__hover-effect link__hover-effect--black"
               >Projects</a
             >
           </li>
-          <li class="nav__link">
+          <li class="nav__link" onclick="toggleModal()">
             <a
               href="#"
               class="nav__link--anchor link__hover-effect link__hover-effect--black"
               >Contact</a
             >
           </li>
-          <li class="nav__link click">
+          <li class="nav__link click" onclick="toggleContrast()">
             <a
               href="#"
               class="nav__link--anchor link__hover-effect link__hover-effect--black"
@@ -60,7 +69,7 @@
           Im a <b class="orange">Frontend Software Engineer</b> with a great
           passion for building web applications with amazing user experiences.
           <br />
-          Here's a bit more <b class="orange">about me.</b>
+          Here's a bit more <b class="orange click" onclick="toggleModal()">about me.</b>
         </p>
         <div class="social__list">
           <a href="" class="social__link click">
@@ -83,9 +92,11 @@
         <a href="#projects" class="scroll">
           <div class="scroll__icon click"></div>
         </a>
-        <button class="mail__btn click">
-            <i class="fas fa-envelope"></i>
-        </button>
+        <a href="#">
+            <button class="mail__btn click" onclick="toggleModal()">
+                <i class="fas fa-envelope"></i>
+            </button>
+        </a>
 
         <div class="modal">
             <div class="modal__half modal__about">
@@ -118,9 +129,10 @@
 
             </div>
             <div class="modal__half modal__contact">
+                <i class="fas fa-times modal__exit click" onclick="toggleModal()"></i>
                 <h3 class="modal__title modal__title--contact">Lets have a chat!</h3>
                 <h4 class="modal__sub-title modal__sub-title--contact">I'd love to hear from you.</h4>
-                <form id="contact__form" action="">
+                <form id="contact__form" onsubmit="contact(event)">
                     <div class="form__item">
                         <label class="form__item--label" for="name"><span class="orange">*</span>Name</label>
                         <input class="input" name="user_name" type="text" required></input>
@@ -141,8 +153,17 @@
                 <div class="modal__overlay modal__overlay--success">
                     Thanks for the message! Looking forward to speaking to you soon.
                 </div>
-            </div>
+            </div> 
         </div>
+        <img src="./assets/semi circle.svg" class="shape shape--0">
+        <img src="./assets/circle.svg" class="shape shape--1">
+        <img src="./assets/squiggly.svg" class="shape shape--2">
+        <img src="./assets/circle.svg" class="shape shape--3">
+        <img src="./assets/triangle.svg" class="shape shape--4">
+        <img src="./assets/circle.svg" class="shape shape--5">
+        <img src="./assets/squiggly.svg" class="shape shape--6">
+        <img src="./assets/circle.svg" class="shape shape--7">
+        <img src="./assets/semi circle.svg" class="shape shape--8">
     </section>
     <section id="projects">
       <div class="container">
@@ -249,23 +270,24 @@
                     </div>
                 </figure>
                 <div class="footer__social--list">
-                    <a href="#" class="footer__social--link
+                    <a href="#"  target="_blank" class="footer__social--link
                     link__hover-effect
                     link__hover-effect--white">
                     GitHub</a>
-                    <a href="#" class="footer__social--link
+                    <a href="#" target="_blank" class="footer__social--link
                     link__hover-effect
                     link__hover-effect--white">
                     LinkedIn</a>
                     <a href="#" class="footer__social--link
                     link__hover-effect
-                    link__hover-effect--white">
+                    link__hover-effect--white" onclick="toggleModal()">
                     Contact</a>
-                    <a href="#" class="footer__social--link
+                    <a href="#" target="_blank" class="footer__social--link
                     link__hover-effect
                     link__hover-effect--white">
                     Resume</a>
                 </div>
+                <!-- need to come back and add links -->
                 <div class="footer__copyright">Copyright Tyler Boyles 2023</div>
             </div>
         </div>
